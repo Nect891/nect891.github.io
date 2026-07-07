@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>通用拦截页</title>
+<style>
+body{
+    background:#ffffff;
+    font-size:14px;
+    margin:80px auto;
+    width:600px;
+}
+.warn-head{
+    background:#c80000;
+    color:#fff;
+    padding:12px 16px;
+    font-size:22px;
+    font-weight:bold;
+}
+.box{
+    border:1px solid #999;
+    padding:20px;
+}
+.line{
+    margin:15px 0;
+}
+.label{
+    color:#333;
+    width:90px;
+    display:inline-block;
+}
+.url{
+    color:#c80000;
+    word-break:break-all;
+}
+.btns{
+    margin-top:30px;
+}
+input[type="button"]{
+    padding:4px 18px;
+    font-family:宋体;
+    font-size:14px;
+    margin-right:12px;
+}
+.danger-btn{
+    background:#c80000;
+    color:#fff;
+    border:1px solid #600;
+}
+.tip{
+    margin-top:20px;
+    font-size:12px;
+    color:#666;
+}
+</style>
+</head>
+<body>
+<div class="warn-head">
+警告：本次访问已被防火墙拦截
+</div>
+<div class="box">
+    <div class="line">
+        <span class="label">访问地址：</span>
+        <span class="url">https://*.parallaxsignal.net</span>
+    </div>
+    <div class="line">
+        <span class="label">风险类型：</span>
+        <span>网络钓鱼站点</span>
+    </div>
+    <div class="line">
+        <span class="label">风险说明：</span>
+        <span>该网站包含网络钓鱼信息，可能导致个人财产损失。</span>
+    </div>
+
+    <div class="btns">
+        <input type="button" value="返回安全页面" onclick="goBack()">
+        <input type="button" class="danger-btn" value="继续访问（危险）"  onclick="goDanger()">
+    </div>
+
+    <div class="tip">
+deviceId:HUAWEI_NetEngine_8000E_X16_policy   </div>
+</div>
+<script>
+// 返回上一页
+function goBack() {
+            window.location.href = 'https://www.baidu.com';
+}
+
+// 提交误报
+
+// 继续访问（危险）
+function goDanger() {
+window.location.href = 'http://182.43.124.6/';
+
+    }
+</script>
+</body>
+</html>
